@@ -10,7 +10,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-light">
+    <main class="container my-5">
+      <%= render partial: "cart/cart" if @render_cart %>
+      <%= yield %>
+    </main>
   </body>
 </html>
